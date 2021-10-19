@@ -209,6 +209,7 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
 SELINUX_IGNORE_NEVERALLOWS := true
+BUILD_BROKEN_DUP_RULES := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/sdm710-common/BoardConfigVendor.mk
