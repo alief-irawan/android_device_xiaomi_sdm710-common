@@ -101,7 +101,6 @@ USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
-TARGET_USE_QTI_BT_STACK := true
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
@@ -177,11 +176,11 @@ TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 VENDOR_SECURITY_PATCH := 2021-03-01
 
 # SELinux
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+#include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+#BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
