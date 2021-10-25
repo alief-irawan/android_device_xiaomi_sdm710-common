@@ -18,7 +18,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(COMMON_PATH)/overlay 
+    $(COMMON_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
@@ -113,7 +113,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
-# AuthSecret 
+# AuthSecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0-service
 
@@ -124,6 +124,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     audio.bluetooth.default \
     libbthost_if \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
 # Camera
@@ -198,7 +200,7 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3 \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service.clearkey
-    
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0 \
@@ -211,7 +213,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1 \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.0 \
-    android.hardware.gnss@2.0.vendor    
+    android.hardware.gnss@2.0.vendor
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -282,11 +284,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml
-    
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0 \
-    android.hardware.keymaster@3.0.vendor    
+    android.hardware.keymaster@3.0.vendor
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -332,7 +334,7 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1 \
     android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
-    
+
 # Neural Network
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0 \
@@ -340,7 +342,7 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.1 \
     android.hardware.neuralnetworks@1.1.vendor \
     android.hardware.neuralnetworks@1.2 \
-    android.hardware.neuralnetworks@1.2.vendo    
+    android.hardware.neuralnetworks@1.2.vendor
 
 # Power
 PRODUCT_PACKAGES += \
