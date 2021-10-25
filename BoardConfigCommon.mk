@@ -175,11 +175,11 @@ TARGET_USES_PRE_UPLINK_FEATURES_NETMGRD := true
 VENDOR_SECURITY_PATCH := 2021-03-01
 
 # SELinux
-#include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
-#SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-#SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-#BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -206,7 +206,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-SELINUX_IGNORE_NEVERALLOWS := true
 BUILD_BROKEN_DUP_RULES := true
 
 # Inherit from the proprietary version
