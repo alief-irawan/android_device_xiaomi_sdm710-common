@@ -176,8 +176,7 @@ PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
     init.qcom.sensors.sh \
     init.qcom.sh \
-    init.qcom.usb.sh \
-    apex_metadata.rc
+    init.qcom.usb.sh
 
 # Context Hub
 PRODUCT_PACKAGES += \
