@@ -56,3 +56,8 @@
 # Sockets
 /dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
 /dev/socket/gps                               u:object_r:gps_socket:s0
+
+# Block devices
+/dev/block/platform/soc/1d84000.ufshc/by-name/cust  u:object_r:metadata_block_device:s0
+/dev/block/platform/soc/7c4000.sdhci/by-name/cust   u:object_r:metadata_block_device:s0
+
