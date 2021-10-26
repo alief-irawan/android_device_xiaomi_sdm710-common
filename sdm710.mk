@@ -69,6 +69,14 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.common@4.0.vendor \
+    android.hardware.audio.common@5.0.vendor \
+    android.hardware.audio.effect@2.0.vendor \
+    android.hardware.audio.effect@4.0.vendor \
+    android.hardware.audio.effect@5.0.vendor \
+    android.hardware.audio@2.0.vendor \
+    android.hardware.audio@4.0.vendor \
+    android.hardware.audio@5.0.vendor \
     android.hardware.audio@5.0-impl:32 \
     android.hardware.audio.effect@5.0-impl:32 \
     android.hardware.audio.service \
@@ -109,10 +117,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-# Component overrides
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
-
 # AuthSecret
 PRODUCT_PACKAGES += \
     android.hardware.authsecret@1.0-service
@@ -121,12 +125,16 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0 \
     android.hardware.bluetooth@1.0.vendor \
+    android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio@2.0-impl:32 \
     audio.bluetooth.default \
     libbthost_if \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -147,6 +155,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     libsfplugin_ccodec
+
+# Common
+PRODUCT_PACKAGES += \
+    android.hardware.common-V1-ndk_platform.vendor \
+    android.hardware.graphics.common-V1-ndk_platform.vendor
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -172,6 +185,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@3.0-impl \
+    android.hardware.graphics.allocator@4.0-impl \
+    android.hardware.graphics.composer@2.1.vendor \
+    android.hardware.graphics.composer@2.2.vendor \
+    android.hardware.graphics.composer@2.3.vendor \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     android.hardware.memtrack@1.0-impl \
@@ -292,6 +310,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
+    android.hardware.light@2.0.vendor \
     android.hardware.light@2.0-service.xiaomi_sdm710
 
 # Media
@@ -331,6 +350,7 @@ PRODUCT_COPY_FILES += \
 
 # Net
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0.vendor \
     android.system.net.netd@1.1 \
     android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
@@ -348,8 +368,11 @@ PRODUCT_PACKAGES += \
 
 # Secure Element
 PRODUCT_PACKAGES += \
+    android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor \
+    android.hardware.secure_element@1.1 \
     android.hardware.secure_element@1.1.vendor \
+    android.hardware.secure_element@1.2 \
     android.hardware.secure_element@1.2.vendor
 
 # Power
@@ -386,6 +409,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio@1.5 \
     android.hardware.radio@1.5.vendor \
+    android.hardware.radio@1.6 \
+    android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.0 \
     android.hardware.radio.config@1.0.vendor \
     android.hardware.radio.config@1.1 \
@@ -434,6 +459,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0.vendor \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
@@ -457,6 +483,7 @@ PRODUCT_COPY_FILES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+    android.system.wifi.keystore@1.0.vendor \
     android.hardware.wifi@1.0-service \
     hostapd \
     libqsap_sdk \
