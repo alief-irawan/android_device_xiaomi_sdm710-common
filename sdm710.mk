@@ -152,8 +152,12 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-service
 
 # Device-specific settings
+#PRODUCT_PACKAGES += \
+#    XiaomiParts
+
+# Allocator
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    android.hidl.allocator@1.0.vendor
 
 # Display
 PRODUCT_PACKAGES += \
