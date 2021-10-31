@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0-impl.generic \
     android.hardware.contexthub@1.0-service
 
+# Device fstab
+PRODUCT_PACKAGES += \
+    fstab.qcom
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@3.0-impl \
