@@ -312,12 +312,6 @@ PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
     netutils-wrapper-1.0
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti \
-    android.hardware.power.stats@1.0-service.mock \
-    vendor.qti.hardware.perf@2.2.vendor
-
 # Neural Network
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.0 \
@@ -335,8 +329,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2 \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.xiaomi-sdm845-libperfmgr \
-    android.hardware.power.stats@1.0-service.xiaomi
+    android.hardware.power-service-qti \
+    android.hardware.power.stats@1.0-service.mock \
+    android.hardware.power.stats@1.0-service.xiaomi \
+    vendor.qti.hardware.perf@2.2.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/power/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
